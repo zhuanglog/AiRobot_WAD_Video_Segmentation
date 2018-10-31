@@ -1,0 +1,1052 @@
+Configurations:
+ACCUM_ITERS                    1
+BACKBONE                       resnet101
+BACKBONE_STRIDES               [4, 8, 16, 32, 64]
+BATCH_SIZE                     1
+BBOX_STD_DEV                   [0.1 0.1 0.2 0.2]
+DETECTION_MAX_INSTANCES        100
+DETECTION_MIN_CONFIDENCE       0.5
+DETECTION_NMS_THRESHOLD        0.3
+EPSILON                        1e-06
+GPU_COUNT                      1
+GRADIENT_CLIP_NORM             5
+IMAGES_PER_GPU                 1
+IMAGE_MAX_DIM                  1024
+IMAGE_META_SIZE                20
+IMAGE_MIN_DIM                  1024
+IMAGE_MIN_SCALE                0
+IMAGE_RESIZE_MODE              none
+IMAGE_SHAPE                    [1024 1024    3]
+LEARNING_MOMENTUM              0.9
+LEARNING_RATE                  1e-06
+LOSS_WEIGHTS                   {'rpn_class_loss': 1.0, 'rpn_bbox_loss': 1.0, 'mrcnn_class_loss': 1.0, 'mrcnn_bbox_loss': 1.0, 'mrcnn_mask_loss': 1.0}
+MASK_POOL_SIZE                 14
+MASK_SHAPE                     [28, 28]
+MAX_GT_INSTANCES               80
+MEAN_PIXEL                     [88.59672608 95.91837699 98.90089033]
+MINI_MASK_SHAPE                (56, 56)
+NAME                           Adriving
+NUM_CLASSES                    8
+OPTIMIZER                      SGD
+POOL_SIZE                      7
+POST_NMS_ROIS_INFERENCE        2000
+POST_NMS_ROIS_TRAINING         4000
+ROI_POSITIVE_RATIO             0.33
+RPN_ANCHOR_RATIOS              [0.5, 1, 2]
+RPN_ANCHOR_SCALES              (32, 64, 128, 256, 512)
+RPN_ANCHOR_STRIDE              1
+RPN_BBOX_STD_DEV               [0.1 0.1 0.2 0.2]
+RPN_NMS_THRESHOLD              0.6
+RPN_TRAIN_ANCHORS_PER_IMAGE    320
+STEPS_PER_EPOCH                1000
+TRAIN_BN                       False
+TRAIN_ROIS_PER_IMAGE           600
+USE_MINI_MASK                  True
+USE_RPN_ROIS                   True
+VALIDATION_STEPS               50
+WEIGHT_DECAY                   0.0001
+
+
+12263
+Training network heads
+
+Starting at epoch 0. LR=1e-06
+
+Checkpoint Path: H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\logs\mask_rcnn\adriving20181027T2323\mask_rcnn_adriving_{epoch:04d}.h5
+Selecting layers to train
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gradients_impl.py:100: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+Epoch 1/10
+1000/1000 [==============================] - 2278s 2s/step - loss: 0.7768 - rpn_class_loss: 0.0158 - rpn_bbox_loss: 0.2390 - mrcnn_class_loss: 0.0522 - mrcnn_bbox_loss: 0.1953 - mrcnn_mask_loss: 0.2744 - val_loss: 0.7682 - val_rpn_class_loss: 0.0192 - val_rpn_bbox_loss: 0.2156 - val_mrcnn_class_loss: 0.0568 - val_mrcnn_bbox_loss: 0.2022 - val_mrcnn_mask_loss: 0.2743
+Epoch 2/10
+1000/1000 [==============================] - 2160s 2s/step - loss: 0.7900 - rpn_class_loss: 0.0162 - rpn_bbox_loss: 0.2528 - mrcnn_class_loss: 0.0505 - mrcnn_bbox_loss: 0.1977 - mrcnn_mask_loss: 0.2727 - val_loss: 0.7354 - val_rpn_class_loss: 0.0191 - val_rpn_bbox_loss: 0.2106 - val_mrcnn_class_loss: 0.0578 - val_mrcnn_bbox_loss: 0.1909 - val_mrcnn_mask_loss: 0.2569
+Epoch 3/10
+1000/1000 [==============================] - 2145s 2s/step - loss: 0.7814 - rpn_class_loss: 0.0162 - rpn_bbox_loss: 0.2447 - mrcnn_class_loss: 0.0494 - mrcnn_bbox_loss: 0.1990 - mrcnn_mask_loss: 0.2721 - val_loss: 0.8785 - val_rpn_class_loss: 0.0194 - val_rpn_bbox_loss: 0.2842 - val_mrcnn_class_loss: 0.0510 - val_mrcnn_bbox_loss: 0.2193 - val_mrcnn_mask_loss: 0.3044
+Epoch 4/10
+1000/1000 [==============================] - 2199s 2s/step - loss: 0.7801 - rpn_class_loss: 0.0163 - rpn_bbox_loss: 0.2381 - mrcnn_class_loss: 0.0552 - mrcnn_bbox_loss: 0.1971 - mrcnn_mask_loss: 0.2732 - val_loss: 0.8017 - val_rpn_class_loss: 0.0139 - val_rpn_bbox_loss: 0.2112 - val_mrcnn_class_loss: 0.0575 - val_mrcnn_bbox_loss: 0.2177 - val_mrcnn_mask_loss: 0.3014
+Epoch 5/10
+1000/1000 [==============================] - 2164s 2s/step - loss: 0.7736 - rpn_class_loss: 0.0167 - rpn_bbox_loss: 0.2308 - mrcnn_class_loss: 0.0526 - mrcnn_bbox_loss: 0.1991 - mrcnn_mask_loss: 0.2744 - val_loss: 0.8958 - val_rpn_class_loss: 0.0164 - val_rpn_bbox_loss: 0.2921 - val_mrcnn_class_loss: 0.0560 - val_mrcnn_bbox_loss: 0.2351 - val_mrcnn_mask_loss: 0.2961
+Epoch 6/10
+1000/1000 [==============================] - 2179s 2s/step - loss: 0.7773 - rpn_class_loss: 0.0168 - rpn_bbox_loss: 0.2409 - mrcnn_class_loss: 0.0537 - mrcnn_bbox_loss: 0.1957 - mrcnn_mask_loss: 0.2701 - val_loss: 0.7773 - val_rpn_class_loss: 0.0146 - val_rpn_bbox_loss: 0.2102 - val_mrcnn_class_loss: 0.0564 - val_mrcnn_bbox_loss: 0.2014 - val_mrcnn_mask_loss: 0.2946
+Epoch 7/10
+1000/1000 [==============================] - 2143s 2s/step - loss: 0.7848 - rpn_class_loss: 0.0171 - rpn_bbox_loss: 0.2416 - mrcnn_class_loss: 0.0502 - mrcnn_bbox_loss: 0.2012 - mrcnn_mask_loss: 0.2746 - val_loss: 0.8044 - val_rpn_class_loss: 0.0152 - val_rpn_bbox_loss: 0.2557 - val_mrcnn_class_loss: 0.0507 - val_mrcnn_bbox_loss: 0.1987 - val_mrcnn_mask_loss: 0.2842
+Epoch 8/10
+1000/1000 [==============================] - 2160s 2s/step - loss: 0.7772 - rpn_class_loss: 0.0168 - rpn_bbox_loss: 0.2416 - mrcnn_class_loss: 0.0512 - mrcnn_bbox_loss: 0.1973 - mrcnn_mask_loss: 0.2702 - val_loss: 0.8358 - val_rpn_class_loss: 0.0194 - val_rpn_bbox_loss: 0.2725 - val_mrcnn_class_loss: 0.0605 - val_mrcnn_bbox_loss: 0.2044 - val_mrcnn_mask_loss: 0.2789
+Epoch 9/10
+1000/1000 [==============================] - 2155s 2s/step - loss: 0.7589 - rpn_class_loss: 0.0160 - rpn_bbox_loss: 0.2271 - mrcnn_class_loss: 0.0491 - mrcnn_bbox_loss: 0.1943 - mrcnn_mask_loss: 0.2724 - val_loss: 0.8161 - val_rpn_class_loss: 0.0166 - val_rpn_bbox_loss: 0.2575 - val_mrcnn_class_loss: 0.0499 - val_mrcnn_bbox_loss: 0.2127 - val_mrcnn_mask_loss: 0.2792
+Epoch 10/10
+1000/1000 [==============================] - 2185s 2s/step - loss: 0.7728 - rpn_class_loss: 0.0170 - rpn_bbox_loss: 0.2376 - mrcnn_class_loss: 0.0529 - mrcnn_bbox_loss: 0.1935 - mrcnn_mask_loss: 0.2716 - val_loss: 0.7394 - val_rpn_class_loss: 0.0169 - val_rpn_bbox_loss: 0.2145 - val_mrcnn_class_loss: 0.0520 - val_mrcnn_bbox_loss: 0.1882 - val_mrcnn_mask_loss: 0.2676
+
+Starting at epoch 10. LR=1e-06
+
+Checkpoint Path: H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\logs\mask_rcnn\adriving20181027T2323\mask_rcnn_adriving_{epoch:04d}.h5
+Selecting layers to train
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res4g_branch2a         (Conv2D)
+bn4g_branch2a          (BatchNorm)
+res4g_branch2b         (Conv2D)
+bn4g_branch2b          (BatchNorm)
+res4g_branch2c         (Conv2D)
+bn4g_branch2c          (BatchNorm)
+res4h_branch2a         (Conv2D)
+bn4h_branch2a          (BatchNorm)
+res4h_branch2b         (Conv2D)
+bn4h_branch2b          (BatchNorm)
+res4h_branch2c         (Conv2D)
+bn4h_branch2c          (BatchNorm)
+res4i_branch2a         (Conv2D)
+bn4i_branch2a          (BatchNorm)
+res4i_branch2b         (Conv2D)
+bn4i_branch2b          (BatchNorm)
+res4i_branch2c         (Conv2D)
+bn4i_branch2c          (BatchNorm)
+res4j_branch2a         (Conv2D)
+bn4j_branch2a          (BatchNorm)
+res4j_branch2b         (Conv2D)
+bn4j_branch2b          (BatchNorm)
+res4j_branch2c         (Conv2D)
+bn4j_branch2c          (BatchNorm)
+res4k_branch2a         (Conv2D)
+bn4k_branch2a          (BatchNorm)
+res4k_branch2b         (Conv2D)
+bn4k_branch2b          (BatchNorm)
+res4k_branch2c         (Conv2D)
+bn4k_branch2c          (BatchNorm)
+res4l_branch2a         (Conv2D)
+bn4l_branch2a          (BatchNorm)
+res4l_branch2b         (Conv2D)
+bn4l_branch2b          (BatchNorm)
+res4l_branch2c         (Conv2D)
+bn4l_branch2c          (BatchNorm)
+res4m_branch2a         (Conv2D)
+bn4m_branch2a          (BatchNorm)
+res4m_branch2b         (Conv2D)
+bn4m_branch2b          (BatchNorm)
+res4m_branch2c         (Conv2D)
+bn4m_branch2c          (BatchNorm)
+res4n_branch2a         (Conv2D)
+bn4n_branch2a          (BatchNorm)
+res4n_branch2b         (Conv2D)
+bn4n_branch2b          (BatchNorm)
+res4n_branch2c         (Conv2D)
+bn4n_branch2c          (BatchNorm)
+res4o_branch2a         (Conv2D)
+bn4o_branch2a          (BatchNorm)
+res4o_branch2b         (Conv2D)
+bn4o_branch2b          (BatchNorm)
+res4o_branch2c         (Conv2D)
+bn4o_branch2c          (BatchNorm)
+res4p_branch2a         (Conv2D)
+bn4p_branch2a          (BatchNorm)
+res4p_branch2b         (Conv2D)
+bn4p_branch2b          (BatchNorm)
+res4p_branch2c         (Conv2D)
+bn4p_branch2c          (BatchNorm)
+res4q_branch2a         (Conv2D)
+bn4q_branch2a          (BatchNorm)
+res4q_branch2b         (Conv2D)
+bn4q_branch2b          (BatchNorm)
+res4q_branch2c         (Conv2D)
+bn4q_branch2c          (BatchNorm)
+res4r_branch2a         (Conv2D)
+bn4r_branch2a          (BatchNorm)
+res4r_branch2b         (Conv2D)
+bn4r_branch2b          (BatchNorm)
+res4r_branch2c         (Conv2D)
+bn4r_branch2c          (BatchNorm)
+res4s_branch2a         (Conv2D)
+bn4s_branch2a          (BatchNorm)
+res4s_branch2b         (Conv2D)
+bn4s_branch2b          (BatchNorm)
+res4s_branch2c         (Conv2D)
+bn4s_branch2c          (BatchNorm)
+res4t_branch2a         (Conv2D)
+bn4t_branch2a          (BatchNorm)
+res4t_branch2b         (Conv2D)
+bn4t_branch2b          (BatchNorm)
+res4t_branch2c         (Conv2D)
+bn4t_branch2c          (BatchNorm)
+res4u_branch2a         (Conv2D)
+bn4u_branch2a          (BatchNorm)
+res4u_branch2b         (Conv2D)
+bn4u_branch2b          (BatchNorm)
+res4u_branch2c         (Conv2D)
+bn4u_branch2c          (BatchNorm)
+res4v_branch2a         (Conv2D)
+bn4v_branch2a          (BatchNorm)
+res4v_branch2b         (Conv2D)
+bn4v_branch2b          (BatchNorm)
+res4v_branch2c         (Conv2D)
+bn4v_branch2c          (BatchNorm)
+res4w_branch2a         (Conv2D)
+bn4w_branch2a          (BatchNorm)
+res4w_branch2b         (Conv2D)
+bn4w_branch2b          (BatchNorm)
+res4w_branch2c         (Conv2D)
+bn4w_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+Epoch 11/20
+1000/1000 [==============================] - 2317s 2s/step - loss: 0.7719 - rpn_class_loss: 0.0164 - rpn_bbox_loss: 0.2358 - mrcnn_class_loss: 0.0506 - mrcnn_bbox_loss: 0.1953 - mrcnn_mask_loss: 0.2737 - val_loss: 0.7810 - val_rpn_class_loss: 0.0157 - val_rpn_bbox_loss: 0.2262 - val_mrcnn_class_loss: 0.0516 - val_mrcnn_bbox_loss: 0.2067 - val_mrcnn_mask_loss: 0.2806
+Epoch 12/20
+1000/1000 [==============================] - 2314s 2s/step - loss: 0.7470 - rpn_class_loss: 0.0166 - rpn_bbox_loss: 0.2234 - mrcnn_class_loss: 0.0524 - mrcnn_bbox_loss: 0.1876 - mrcnn_mask_loss: 0.2669 - val_loss: 0.8295 - val_rpn_class_loss: 0.0188 - val_rpn_bbox_loss: 0.2506 - val_mrcnn_class_loss: 0.0700 - val_mrcnn_bbox_loss: 0.2058 - val_mrcnn_mask_loss: 0.2842
+Epoch 13/20
+1000/1000 [==============================] - 2313s 2s/step - loss: 0.7853 - rpn_class_loss: 0.0159 - rpn_bbox_loss: 0.2468 - mrcnn_class_loss: 0.0511 - mrcnn_bbox_loss: 0.1977 - mrcnn_mask_loss: 0.2737 - val_loss: 0.7837 - val_rpn_class_loss: 0.0161 - val_rpn_bbox_loss: 0.2553 - val_mrcnn_class_loss: 0.0492 - val_mrcnn_bbox_loss: 0.1974 - val_mrcnn_mask_loss: 0.2657
+Epoch 14/20
+1000/1000 [==============================] - 2324s 2s/step - loss: 0.7894 - rpn_class_loss: 0.0172 - rpn_bbox_loss: 0.2450 - mrcnn_class_loss: 0.0524 - mrcnn_bbox_loss: 0.2001 - mrcnn_mask_loss: 0.2746 - val_loss: 0.8215 - val_rpn_class_loss: 0.0226 - val_rpn_bbox_loss: 0.2525 - val_mrcnn_class_loss: 0.0583 - val_mrcnn_bbox_loss: 0.2013 - val_mrcnn_mask_loss: 0.2867
+Epoch 15/20
+1000/1000 [==============================] - 2317s 2s/step - loss: 0.7727 - rpn_class_loss: 0.0164 - rpn_bbox_loss: 0.2339 - mrcnn_class_loss: 0.0526 - mrcnn_bbox_loss: 0.1983 - mrcnn_mask_loss: 0.2715 - val_loss: 0.8037 - val_rpn_class_loss: 0.0198 - val_rpn_bbox_loss: 0.2506 - val_mrcnn_class_loss: 0.0502 - val_mrcnn_bbox_loss: 0.2066 - val_mrcnn_mask_loss: 0.2764
+Epoch 16/20
+1000/1000 [==============================] - 2317s 2s/step - loss: 0.7768 - rpn_class_loss: 0.0166 - rpn_bbox_loss: 0.2396 - mrcnn_class_loss: 0.0527 - mrcnn_bbox_loss: 0.1954 - mrcnn_mask_loss: 0.2725 - val_loss: 0.7802 - val_rpn_class_loss: 0.0110 - val_rpn_bbox_loss: 0.2458 - val_mrcnn_class_loss: 0.0470 - val_mrcnn_bbox_loss: 0.1963 - val_mrcnn_mask_loss: 0.2801
+Epoch 17/20
+1000/1000 [==============================] - 2344s 2s/step - loss: 0.7851 - rpn_class_loss: 0.0171 - rpn_bbox_loss: 0.2425 - mrcnn_class_loss: 0.0528 - mrcnn_bbox_loss: 0.1992 - mrcnn_mask_loss: 0.2735 - val_loss: 0.8185 - val_rpn_class_loss: 0.0162 - val_rpn_bbox_loss: 0.2285 - val_mrcnn_class_loss: 0.0619 - val_mrcnn_bbox_loss: 0.2267 - val_mrcnn_mask_loss: 0.2850
+Epoch 18/20
+1000/1000 [==============================] - 2309s 2s/step - loss: 0.7734 - rpn_class_loss: 0.0163 - rpn_bbox_loss: 0.2397 - mrcnn_class_loss: 0.0505 - mrcnn_bbox_loss: 0.1969 - mrcnn_mask_loss: 0.2700 - val_loss: 0.7533 - val_rpn_class_loss: 0.0155 - val_rpn_bbox_loss: 0.2423 - val_mrcnn_class_loss: 0.0462 - val_mrcnn_bbox_loss: 0.1871 - val_mrcnn_mask_loss: 0.2621
+Epoch 19/20
+1000/1000 [==============================] - 2310s 2s/step - loss: 0.7864 - rpn_class_loss: 0.0161 - rpn_bbox_loss: 0.2429 - mrcnn_class_loss: 0.0515 - mrcnn_bbox_loss: 0.2010 - mrcnn_mask_loss: 0.2747 - val_loss: 0.8148 - val_rpn_class_loss: 0.0168 - val_rpn_bbox_loss: 0.2717 - val_mrcnn_class_loss: 0.0474 - val_mrcnn_bbox_loss: 0.2020 - val_mrcnn_mask_loss: 0.2768
+Epoch 20/20
+1000/1000 [==============================] - 2308s 2s/step - loss: 0.7809 - rpn_class_loss: 0.0167 - rpn_bbox_loss: 0.2440 - mrcnn_class_loss: 0.0500 - mrcnn_bbox_loss: 0.1980 - mrcnn_mask_loss: 0.2722 - val_loss: 0.7249 - val_rpn_class_loss: 0.0153 - val_rpn_bbox_loss: 0.2413 - val_mrcnn_class_loss: 0.0526 - val_mrcnn_bbox_loss: 0.1673 - val_mrcnn_mask_loss: 0.2483
+
+Starting at epoch 20. LR=1e-07
+
+Checkpoint Path: H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\logs\mask_rcnn\adriving20181027T2323\mask_rcnn_adriving_{epoch:04d}.h5
+Selecting layers to train
+res3a_branch2a         (Conv2D)
+bn3a_branch2a          (BatchNorm)
+res3a_branch2b         (Conv2D)
+bn3a_branch2b          (BatchNorm)
+res3a_branch2c         (Conv2D)
+res3a_branch1          (Conv2D)
+bn3a_branch2c          (BatchNorm)
+bn3a_branch1           (BatchNorm)
+res3b_branch2a         (Conv2D)
+bn3b_branch2a          (BatchNorm)
+res3b_branch2b         (Conv2D)
+bn3b_branch2b          (BatchNorm)
+res3b_branch2c         (Conv2D)
+bn3b_branch2c          (BatchNorm)
+res3c_branch2a         (Conv2D)
+bn3c_branch2a          (BatchNorm)
+res3c_branch2b         (Conv2D)
+bn3c_branch2b          (BatchNorm)
+res3c_branch2c         (Conv2D)
+bn3c_branch2c          (BatchNorm)
+res3d_branch2a         (Conv2D)
+bn3d_branch2a          (BatchNorm)
+res3d_branch2b         (Conv2D)
+bn3d_branch2b          (BatchNorm)
+res3d_branch2c         (Conv2D)
+bn3d_branch2c          (BatchNorm)
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res4g_branch2a         (Conv2D)
+bn4g_branch2a          (BatchNorm)
+res4g_branch2b         (Conv2D)
+bn4g_branch2b          (BatchNorm)
+res4g_branch2c         (Conv2D)
+bn4g_branch2c          (BatchNorm)
+res4h_branch2a         (Conv2D)
+bn4h_branch2a          (BatchNorm)
+res4h_branch2b         (Conv2D)
+bn4h_branch2b          (BatchNorm)
+res4h_branch2c         (Conv2D)
+bn4h_branch2c          (BatchNorm)
+res4i_branch2a         (Conv2D)
+bn4i_branch2a          (BatchNorm)
+res4i_branch2b         (Conv2D)
+bn4i_branch2b          (BatchNorm)
+res4i_branch2c         (Conv2D)
+bn4i_branch2c          (BatchNorm)
+res4j_branch2a         (Conv2D)
+bn4j_branch2a          (BatchNorm)
+res4j_branch2b         (Conv2D)
+bn4j_branch2b          (BatchNorm)
+res4j_branch2c         (Conv2D)
+bn4j_branch2c          (BatchNorm)
+res4k_branch2a         (Conv2D)
+bn4k_branch2a          (BatchNorm)
+res4k_branch2b         (Conv2D)
+bn4k_branch2b          (BatchNorm)
+res4k_branch2c         (Conv2D)
+bn4k_branch2c          (BatchNorm)
+res4l_branch2a         (Conv2D)
+bn4l_branch2a          (BatchNorm)
+res4l_branch2b         (Conv2D)
+bn4l_branch2b          (BatchNorm)
+res4l_branch2c         (Conv2D)
+bn4l_branch2c          (BatchNorm)
+res4m_branch2a         (Conv2D)
+bn4m_branch2a          (BatchNorm)
+res4m_branch2b         (Conv2D)
+bn4m_branch2b          (BatchNorm)
+res4m_branch2c         (Conv2D)
+bn4m_branch2c          (BatchNorm)
+res4n_branch2a         (Conv2D)
+bn4n_branch2a          (BatchNorm)
+res4n_branch2b         (Conv2D)
+bn4n_branch2b          (BatchNorm)
+res4n_branch2c         (Conv2D)
+bn4n_branch2c          (BatchNorm)
+res4o_branch2a         (Conv2D)
+bn4o_branch2a          (BatchNorm)
+res4o_branch2b         (Conv2D)
+bn4o_branch2b          (BatchNorm)
+res4o_branch2c         (Conv2D)
+bn4o_branch2c          (BatchNorm)
+res4p_branch2a         (Conv2D)
+bn4p_branch2a          (BatchNorm)
+res4p_branch2b         (Conv2D)
+bn4p_branch2b          (BatchNorm)
+res4p_branch2c         (Conv2D)
+bn4p_branch2c          (BatchNorm)
+res4q_branch2a         (Conv2D)
+bn4q_branch2a          (BatchNorm)
+res4q_branch2b         (Conv2D)
+bn4q_branch2b          (BatchNorm)
+res4q_branch2c         (Conv2D)
+bn4q_branch2c          (BatchNorm)
+res4r_branch2a         (Conv2D)
+bn4r_branch2a          (BatchNorm)
+res4r_branch2b         (Conv2D)
+bn4r_branch2b          (BatchNorm)
+res4r_branch2c         (Conv2D)
+bn4r_branch2c          (BatchNorm)
+res4s_branch2a         (Conv2D)
+bn4s_branch2a          (BatchNorm)
+res4s_branch2b         (Conv2D)
+bn4s_branch2b          (BatchNorm)
+res4s_branch2c         (Conv2D)
+bn4s_branch2c          (BatchNorm)
+res4t_branch2a         (Conv2D)
+bn4t_branch2a          (BatchNorm)
+res4t_branch2b         (Conv2D)
+bn4t_branch2b          (BatchNorm)
+res4t_branch2c         (Conv2D)
+bn4t_branch2c          (BatchNorm)
+res4u_branch2a         (Conv2D)
+bn4u_branch2a          (BatchNorm)
+res4u_branch2b         (Conv2D)
+bn4u_branch2b          (BatchNorm)
+res4u_branch2c         (Conv2D)
+bn4u_branch2c          (BatchNorm)
+res4v_branch2a         (Conv2D)
+bn4v_branch2a          (BatchNorm)
+res4v_branch2b         (Conv2D)
+bn4v_branch2b          (BatchNorm)
+res4v_branch2c         (Conv2D)
+bn4v_branch2c          (BatchNorm)
+res4w_branch2a         (Conv2D)
+bn4w_branch2a          (BatchNorm)
+res4w_branch2b         (Conv2D)
+bn4w_branch2b          (BatchNorm)
+res4w_branch2c         (Conv2D)
+bn4w_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+Epoch 21/30
+1000/1000 [==============================] - 2342s 2s/step - loss: 0.7640 - rpn_class_loss: 0.0160 - rpn_bbox_loss: 0.2375 - mrcnn_class_loss: 0.0492 - mrcnn_bbox_loss: 0.1930 - mrcnn_mask_loss: 0.2682 - val_loss: 0.8005 - val_rpn_class_loss: 0.0159 - val_rpn_bbox_loss: 0.2229 - val_mrcnn_class_loss: 0.0635 - val_mrcnn_bbox_loss: 0.2157 - val_mrcnn_mask_loss: 0.2824
+Epoch 22/30
+1000/1000 [==============================] - 2354s 2s/step - loss: 0.7789 - rpn_class_loss: 0.0171 - rpn_bbox_loss: 0.2472 - mrcnn_class_loss: 0.0509 - mrcnn_bbox_loss: 0.1919 - mrcnn_mask_loss: 0.2717 - val_loss: 0.7308 - val_rpn_class_loss: 0.0162 - val_rpn_bbox_loss: 0.2041 - val_mrcnn_class_loss: 0.0517 - val_mrcnn_bbox_loss: 0.1904 - val_mrcnn_mask_loss: 0.2683
+Epoch 23/30
+1000/1000 [==============================] - 2394s 2s/step - loss: 0.7861 - rpn_class_loss: 0.0167 - rpn_bbox_loss: 0.2434 - mrcnn_class_loss: 0.0538 - mrcnn_bbox_loss: 0.1979 - mrcnn_mask_loss: 0.2744 - val_loss: 0.7895 - val_rpn_class_loss: 0.0187 - val_rpn_bbox_loss: 0.2458 - val_mrcnn_class_loss: 0.0474 - val_mrcnn_bbox_loss: 0.2035 - val_mrcnn_mask_loss: 0.2741
+Epoch 24/30
+1000/1000 [==============================] - 2351s 2s/step - loss: 0.7806 - rpn_class_loss: 0.0167 - rpn_bbox_loss: 0.2403 - mrcnn_class_loss: 0.0525 - mrcnn_bbox_loss: 0.1974 - mrcnn_mask_loss: 0.2736 - val_loss: 0.7752 - val_rpn_class_loss: 0.0139 - val_rpn_bbox_loss: 0.2101 - val_mrcnn_class_loss: 0.0520 - val_mrcnn_bbox_loss: 0.2174 - val_mrcnn_mask_loss: 0.2819
+Epoch 25/30
+1000/1000 [==============================] - 2365s 2s/step - loss: 0.7881 - rpn_class_loss: 0.0169 - rpn_bbox_loss: 0.2441 - mrcnn_class_loss: 0.0520 - mrcnn_bbox_loss: 0.2012 - mrcnn_mask_loss: 0.2739 - val_loss: 0.7287 - val_rpn_class_loss: 0.0152 - val_rpn_bbox_loss: 0.2153 - val_mrcnn_class_loss: 0.0505 - val_mrcnn_bbox_loss: 0.1846 - val_mrcnn_mask_loss: 0.2632
+Epoch 26/30
+1000/1000 [==============================] - 2369s 2s/step - loss: 0.7726 - rpn_class_loss: 0.0167 - rpn_bbox_loss: 0.2404 - mrcnn_class_loss: 0.0503 - mrcnn_bbox_loss: 0.1958 - mrcnn_mask_loss: 0.2694 - val_loss: 0.6642 - val_rpn_class_loss: 0.0150 - val_rpn_bbox_loss: 0.2052 - val_mrcnn_class_loss: 0.0415 - val_mrcnn_bbox_loss: 0.1592 - val_mrcnn_mask_loss: 0.2432
+Epoch 27/30
+1000/1000 [==============================] - 2398s 2s/step - loss: 0.7820 - rpn_class_loss: 0.0162 - rpn_bbox_loss: 0.2477 - mrcnn_class_loss: 0.0535 - mrcnn_bbox_loss: 0.1944 - mrcnn_mask_loss: 0.2701 - val_loss: 0.7638 - val_rpn_class_loss: 0.0175 - val_rpn_bbox_loss: 0.2171 - val_mrcnn_class_loss: 0.0547 - val_mrcnn_bbox_loss: 0.1968 - val_mrcnn_mask_loss: 0.2777
+Epoch 28/30
+1000/1000 [==============================] - 2383s 2s/step - loss: 0.7702 - rpn_class_loss: 0.0160 - rpn_bbox_loss: 0.2349 - mrcnn_class_loss: 0.0530 - mrcnn_bbox_loss: 0.1950 - mrcnn_mask_loss: 0.2713 - val_loss: 0.8267 - val_rpn_class_loss: 0.0159 - val_rpn_bbox_loss: 0.2687 - val_mrcnn_class_loss: 0.0530 - val_mrcnn_bbox_loss: 0.2047 - val_mrcnn_mask_loss: 0.2843
+Epoch 29/30
+1000/1000 [==============================] - 2354s 2s/step - loss: 0.7690 - rpn_class_loss: 0.0160 - rpn_bbox_loss: 0.2320 - mrcnn_class_loss: 0.0513 - mrcnn_bbox_loss: 0.1967 - mrcnn_mask_loss: 0.2728 - val_loss: 0.8153 - val_rpn_class_loss: 0.0187 - val_rpn_bbox_loss: 0.2537 - val_mrcnn_class_loss: 0.0576 - val_mrcnn_bbox_loss: 0.2079 - val_mrcnn_mask_loss: 0.2774
+Epoch 30/30
+1000/1000 [==============================] - 2323s 2s/step - loss: 0.7711 - rpn_class_loss: 0.0161 - rpn_bbox_loss: 0.2373 - mrcnn_class_loss: 0.0501 - mrcnn_bbox_loss: 0.1966 - mrcnn_mask_loss: 0.2709 - val_loss: 0.7373 - val_rpn_class_loss: 0.0140 - val_rpn_bbox_loss: 0.2116 - val_mrcnn_class_loss: 0.0524 - val_mrcnn_bbox_loss: 0.1916 - val_mrcnn_mask_loss: 0.2677
+
+Starting at epoch 30. LR=1e-07
+
+Checkpoint Path: H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\logs\mask_rcnn\adriving20181027T2323\mask_rcnn_adriving_{epoch:04d}.h5
+Selecting layers to train
+conv1                  (Conv2D)
+bn_conv1               (BatchNorm)
+res2a_branch2a         (Conv2D)
+bn2a_branch2a          (BatchNorm)
+res2a_branch2b         (Conv2D)
+bn2a_branch2b          (BatchNorm)
+res2a_branch2c         (Conv2D)
+res2a_branch1          (Conv2D)
+bn2a_branch2c          (BatchNorm)
+bn2a_branch1           (BatchNorm)
+res2b_branch2a         (Conv2D)
+bn2b_branch2a          (BatchNorm)
+res2b_branch2b         (Conv2D)
+bn2b_branch2b          (BatchNorm)
+res2b_branch2c         (Conv2D)
+bn2b_branch2c          (BatchNorm)
+res2c_branch2a         (Conv2D)
+bn2c_branch2a          (BatchNorm)
+res2c_branch2b         (Conv2D)
+bn2c_branch2b          (BatchNorm)
+res2c_branch2c         (Conv2D)
+bn2c_branch2c          (BatchNorm)
+res3a_branch2a         (Conv2D)
+bn3a_branch2a          (BatchNorm)
+res3a_branch2b         (Conv2D)
+bn3a_branch2b          (BatchNorm)
+res3a_branch2c         (Conv2D)
+res3a_branch1          (Conv2D)
+bn3a_branch2c          (BatchNorm)
+bn3a_branch1           (BatchNorm)
+res3b_branch2a         (Conv2D)
+bn3b_branch2a          (BatchNorm)
+res3b_branch2b         (Conv2D)
+bn3b_branch2b          (BatchNorm)
+res3b_branch2c         (Conv2D)
+bn3b_branch2c          (BatchNorm)
+res3c_branch2a         (Conv2D)
+bn3c_branch2a          (BatchNorm)
+res3c_branch2b         (Conv2D)
+bn3c_branch2b          (BatchNorm)
+res3c_branch2c         (Conv2D)
+bn3c_branch2c          (BatchNorm)
+res3d_branch2a         (Conv2D)
+bn3d_branch2a          (BatchNorm)
+res3d_branch2b         (Conv2D)
+bn3d_branch2b          (BatchNorm)
+res3d_branch2c         (Conv2D)
+bn3d_branch2c          (BatchNorm)
+res4a_branch2a         (Conv2D)
+bn4a_branch2a          (BatchNorm)
+res4a_branch2b         (Conv2D)
+bn4a_branch2b          (BatchNorm)
+res4a_branch2c         (Conv2D)
+res4a_branch1          (Conv2D)
+bn4a_branch2c          (BatchNorm)
+bn4a_branch1           (BatchNorm)
+res4b_branch2a         (Conv2D)
+bn4b_branch2a          (BatchNorm)
+res4b_branch2b         (Conv2D)
+bn4b_branch2b          (BatchNorm)
+res4b_branch2c         (Conv2D)
+bn4b_branch2c          (BatchNorm)
+res4c_branch2a         (Conv2D)
+bn4c_branch2a          (BatchNorm)
+res4c_branch2b         (Conv2D)
+bn4c_branch2b          (BatchNorm)
+res4c_branch2c         (Conv2D)
+bn4c_branch2c          (BatchNorm)
+res4d_branch2a         (Conv2D)
+bn4d_branch2a          (BatchNorm)
+res4d_branch2b         (Conv2D)
+bn4d_branch2b          (BatchNorm)
+res4d_branch2c         (Conv2D)
+bn4d_branch2c          (BatchNorm)
+res4e_branch2a         (Conv2D)
+bn4e_branch2a          (BatchNorm)
+res4e_branch2b         (Conv2D)
+bn4e_branch2b          (BatchNorm)
+res4e_branch2c         (Conv2D)
+bn4e_branch2c          (BatchNorm)
+res4f_branch2a         (Conv2D)
+bn4f_branch2a          (BatchNorm)
+res4f_branch2b         (Conv2D)
+bn4f_branch2b          (BatchNorm)
+res4f_branch2c         (Conv2D)
+bn4f_branch2c          (BatchNorm)
+res4g_branch2a         (Conv2D)
+bn4g_branch2a          (BatchNorm)
+res4g_branch2b         (Conv2D)
+bn4g_branch2b          (BatchNorm)
+res4g_branch2c         (Conv2D)
+bn4g_branch2c          (BatchNorm)
+res4h_branch2a         (Conv2D)
+bn4h_branch2a          (BatchNorm)
+res4h_branch2b         (Conv2D)
+bn4h_branch2b          (BatchNorm)
+res4h_branch2c         (Conv2D)
+bn4h_branch2c          (BatchNorm)
+res4i_branch2a         (Conv2D)
+bn4i_branch2a          (BatchNorm)
+res4i_branch2b         (Conv2D)
+bn4i_branch2b          (BatchNorm)
+res4i_branch2c         (Conv2D)
+bn4i_branch2c          (BatchNorm)
+res4j_branch2a         (Conv2D)
+bn4j_branch2a          (BatchNorm)
+res4j_branch2b         (Conv2D)
+bn4j_branch2b          (BatchNorm)
+res4j_branch2c         (Conv2D)
+bn4j_branch2c          (BatchNorm)
+res4k_branch2a         (Conv2D)
+bn4k_branch2a          (BatchNorm)
+res4k_branch2b         (Conv2D)
+bn4k_branch2b          (BatchNorm)
+res4k_branch2c         (Conv2D)
+bn4k_branch2c          (BatchNorm)
+res4l_branch2a         (Conv2D)
+bn4l_branch2a          (BatchNorm)
+res4l_branch2b         (Conv2D)
+bn4l_branch2b          (BatchNorm)
+res4l_branch2c         (Conv2D)
+bn4l_branch2c          (BatchNorm)
+res4m_branch2a         (Conv2D)
+bn4m_branch2a          (BatchNorm)
+res4m_branch2b         (Conv2D)
+bn4m_branch2b          (BatchNorm)
+res4m_branch2c         (Conv2D)
+bn4m_branch2c          (BatchNorm)
+res4n_branch2a         (Conv2D)
+bn4n_branch2a          (BatchNorm)
+res4n_branch2b         (Conv2D)
+bn4n_branch2b          (BatchNorm)
+res4n_branch2c         (Conv2D)
+bn4n_branch2c          (BatchNorm)
+res4o_branch2a         (Conv2D)
+bn4o_branch2a          (BatchNorm)
+res4o_branch2b         (Conv2D)
+bn4o_branch2b          (BatchNorm)
+res4o_branch2c         (Conv2D)
+bn4o_branch2c          (BatchNorm)
+res4p_branch2a         (Conv2D)
+bn4p_branch2a          (BatchNorm)
+res4p_branch2b         (Conv2D)
+bn4p_branch2b          (BatchNorm)
+res4p_branch2c         (Conv2D)
+bn4p_branch2c          (BatchNorm)
+res4q_branch2a         (Conv2D)
+bn4q_branch2a          (BatchNorm)
+res4q_branch2b         (Conv2D)
+bn4q_branch2b          (BatchNorm)
+res4q_branch2c         (Conv2D)
+bn4q_branch2c          (BatchNorm)
+res4r_branch2a         (Conv2D)
+bn4r_branch2a          (BatchNorm)
+res4r_branch2b         (Conv2D)
+bn4r_branch2b          (BatchNorm)
+res4r_branch2c         (Conv2D)
+bn4r_branch2c          (BatchNorm)
+res4s_branch2a         (Conv2D)
+bn4s_branch2a          (BatchNorm)
+res4s_branch2b         (Conv2D)
+bn4s_branch2b          (BatchNorm)
+res4s_branch2c         (Conv2D)
+bn4s_branch2c          (BatchNorm)
+res4t_branch2a         (Conv2D)
+bn4t_branch2a          (BatchNorm)
+res4t_branch2b         (Conv2D)
+bn4t_branch2b          (BatchNorm)
+res4t_branch2c         (Conv2D)
+bn4t_branch2c          (BatchNorm)
+res4u_branch2a         (Conv2D)
+bn4u_branch2a          (BatchNorm)
+res4u_branch2b         (Conv2D)
+bn4u_branch2b          (BatchNorm)
+res4u_branch2c         (Conv2D)
+bn4u_branch2c          (BatchNorm)
+res4v_branch2a         (Conv2D)
+bn4v_branch2a          (BatchNorm)
+res4v_branch2b         (Conv2D)
+bn4v_branch2b          (BatchNorm)
+res4v_branch2c         (Conv2D)
+bn4v_branch2c          (BatchNorm)
+res4w_branch2a         (Conv2D)
+bn4w_branch2a          (BatchNorm)
+res4w_branch2b         (Conv2D)
+bn4w_branch2b          (BatchNorm)
+res4w_branch2c         (Conv2D)
+bn4w_branch2c          (BatchNorm)
+res5a_branch2a         (Conv2D)
+bn5a_branch2a          (BatchNorm)
+res5a_branch2b         (Conv2D)
+bn5a_branch2b          (BatchNorm)
+res5a_branch2c         (Conv2D)
+res5a_branch1          (Conv2D)
+bn5a_branch2c          (BatchNorm)
+bn5a_branch1           (BatchNorm)
+res5b_branch2a         (Conv2D)
+bn5b_branch2a          (BatchNorm)
+res5b_branch2b         (Conv2D)
+bn5b_branch2b          (BatchNorm)
+res5b_branch2c         (Conv2D)
+bn5b_branch2c          (BatchNorm)
+res5c_branch2a         (Conv2D)
+bn5c_branch2a          (BatchNorm)
+res5c_branch2b         (Conv2D)
+bn5c_branch2b          (BatchNorm)
+res5c_branch2c         (Conv2D)
+bn5c_branch2c          (BatchNorm)
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+In model:  rpn_model
+    rpn_conv_shared        (Conv2D)
+    rpn_class_raw          (Conv2D)
+    rpn_bbox_pred          (Conv2D)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+Epoch 31/40
+ 443/1000 [============>.................] - ETA: 21:41 - loss: 0.7605 - rpn_class_loss: 0.0160 - rpn_bbox_loss: 0.2238 - mrcnn_class_loss: 0.0497 - mrcnn_bbox_loss: 0.1983 - mrcnn_mask_loss: 0.2727
+---------------------------------------------------------------------------
+ResourceExhaustedError                    Traceback (most recent call last)
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _do_call(self, fn, *args)
+   1321     try:
+-> 1322       return fn(*args)
+   1323     except errors.OpError as e:
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _run_fn(feed_dict, fetch_list, target_list, options, run_metadata)
+   1306       return self._call_tf_sessionrun(
+-> 1307           options, feed_dict, fetch_list, target_list, run_metadata)
+   1308 
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _call_tf_sessionrun(self, options, feed_dict, fetch_list, target_list, run_metadata)
+   1408           self._session, options, feed_dict, fetch_list, target_list,
+-> 1409           run_metadata)
+   1410     else:
+
+ResourceExhaustedError: OOM when allocating tensor with shape[600,256,28,28] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[Node: training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput = Conv2DBackpropInput[T=DT_FLOAT, _class=["loc:@training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropFilter"], data_format="NCHW", dilations=[1, 1, 1, 1], padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:GPU:0"](training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput-0-VecPermuteNHWCToNCHW-LayoutOptimizer, mrcnn_mask/kernel/read, training_3/SGD/gradients/mrcnn_mask/Sigmoid_grad/SigmoidGrad)]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+	 [[Node: training_3/SGD/gradients/mrcnn_mask_conv1/convolution_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer/_9749 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_12481...tOptimizer", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"]()]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+
+During handling of the above exception, another exception occurred:
+
+ResourceExhaustedError                    Traceback (most recent call last)
+<ipython-input-2-be1c86ea2182> in <module>
+     18 
+     19     data_dir = Path(os.path.join(ROOT_DIR, setting['TEST_DATA_CLEAN_PATH'], 'train_val'))
+---> 20     train(model)
+     21 
+
+<ipython-input-1-3c024bc1c797> in train(model)
+    167         augmentation=augmentation,
+    168         epochs=40,
+--> 169         layers='all')
+    170 
+    171 
+
+H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\maskrcnn\mrcnn\model.py in train(self, train_dataset, val_dataset, learning_rate, epochs, layers, augmentation)
+   2412             max_queue_size=100,
+   2413             workers=workers,
+-> 2414             use_multiprocessing=True,
+   2415         )
+   2416         self.epoch = max(self.epoch, epochs)
+
+~\Anaconda3\lib\site-packages\keras\legacy\interfaces.py in wrapper(*args, **kwargs)
+     89                 warnings.warn('Update your `' + object_name +
+     90                               '` call to the Keras 2 API: ' + signature, stacklevel=2)
+---> 91             return func(*args, **kwargs)
+     92         wrapper._original_function = func
+     93         return wrapper
+
+~\Anaconda3\lib\site-packages\keras\engine\training.py in fit_generator(self, generator, steps_per_epoch, epochs, verbose, callbacks, validation_data, validation_steps, class_weight, max_queue_size, workers, use_multiprocessing, shuffle, initial_epoch)
+   2228                     outs = self.train_on_batch(x, y,
+   2229                                                sample_weight=sample_weight,
+-> 2230                                                class_weight=class_weight)
+   2231 
+   2232                     if not isinstance(outs, list):
+
+~\Anaconda3\lib\site-packages\keras\engine\training.py in train_on_batch(self, x, y, sample_weight, class_weight)
+   1881             ins = x + y + sample_weights
+   1882         self._make_train_function()
+-> 1883         outputs = self.train_function(ins)
+   1884         if len(outputs) == 1:
+   1885             return outputs[0]
+
+~\Anaconda3\lib\site-packages\keras\backend\tensorflow_backend.py in __call__(self, inputs)
+   2480         session = get_session()
+   2481         updated = session.run(fetches=fetches, feed_dict=feed_dict,
+-> 2482                               **self.session_kwargs)
+   2483         return updated[:len(self.outputs)]
+   2484 
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in run(self, fetches, feed_dict, options, run_metadata)
+    898     try:
+    899       result = self._run(None, fetches, feed_dict, options_ptr,
+--> 900                          run_metadata_ptr)
+    901       if run_metadata:
+    902         proto_data = tf_session.TF_GetBuffer(run_metadata_ptr)
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _run(self, handle, fetches, feed_dict, options, run_metadata)
+   1133     if final_fetches or final_targets or (handle and feed_dict_tensor):
+   1134       results = self._do_run(handle, final_targets, final_fetches,
+-> 1135                              feed_dict_tensor, options, run_metadata)
+   1136     else:
+   1137       results = []
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _do_run(self, handle, target_list, fetch_list, feed_dict, options, run_metadata)
+   1314     if handle is None:
+   1315       return self._do_call(_run_fn, feeds, fetches, targets, options,
+-> 1316                            run_metadata)
+   1317     else:
+   1318       return self._do_call(_prun_fn, handle, feeds, fetches)
+
+~\Anaconda3\lib\site-packages\tensorflow\python\client\session.py in _do_call(self, fn, *args)
+   1333         except KeyError:
+   1334           pass
+-> 1335       raise type(e)(node_def, op, message)
+   1336 
+   1337   def _extend_graph(self):
+
+ResourceExhaustedError: OOM when allocating tensor with shape[600,256,28,28] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[Node: training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput = Conv2DBackpropInput[T=DT_FLOAT, _class=["loc:@training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropFilter"], data_format="NCHW", dilations=[1, 1, 1, 1], padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:GPU:0"](training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput-0-VecPermuteNHWCToNCHW-LayoutOptimizer, mrcnn_mask/kernel/read, training_3/SGD/gradients/mrcnn_mask/Sigmoid_grad/SigmoidGrad)]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+	 [[Node: training_3/SGD/gradients/mrcnn_mask_conv1/convolution_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer/_9749 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_12481...tOptimizer", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"]()]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+
+Caused by op 'training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput', defined at:
+  File "C:\Users\Administrator\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Administrator\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel_launcher.py", line 16, in <module>
+    app.launch_new_instance()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\traitlets\config\application.py", line 658, in launch_instance
+    app.start()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\kernelapp.py", line 499, in start
+    self.io_loop.start()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\platform\asyncio.py", line 132, in start
+    self.asyncio_loop.run_forever()
+  File "C:\Users\Administrator\Anaconda3\lib\asyncio\base_events.py", line 422, in run_forever
+    self._run_once()
+  File "C:\Users\Administrator\Anaconda3\lib\asyncio\base_events.py", line 1434, in _run_once
+    handle._run()
+  File "C:\Users\Administrator\Anaconda3\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\ioloop.py", line 758, in _run_callback
+    ret = callback()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\gen.py", line 1233, in inner
+    self.run()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\gen.py", line 1147, in run
+    yielded = self.gen.send(value)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\kernelbase.py", line 346, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\gen.py", line 326, in wrapper
+    yielded = next(result)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\kernelbase.py", line 259, in dispatch_shell
+    yield gen.maybe_future(handler(stream, idents, msg))
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\gen.py", line 326, in wrapper
+    yielded = next(result)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\kernelbase.py", line 513, in execute_request
+    user_expressions, allow_stdin,
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tornado\gen.py", line 326, in wrapper
+    yielded = next(result)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\ipkernel.py", line 294, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\ipykernel\zmqshell.py", line 536, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 2817, in run_cell
+    raw_cell, store_history, silent, shell_futures)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 2843, in _run_cell
+    return runner(coro)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\async_helpers.py", line 67, in _pseudo_sync_runner
+    coro.send(None)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 3018, in run_cell_async
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 3183, in run_ast_nodes
+    if (yield from self.run_code(code, result)):
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 3265, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-2-be1c86ea2182>", line 20, in <module>
+    train(model)
+  File "<ipython-input-1-3c024bc1c797>", line 169, in train
+    layers='all')
+  File "H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\maskrcnn\mrcnn\model.py", line 2414, in train
+    use_multiprocessing=True,
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\legacy\interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\engine\training.py", line 2080, in fit_generator
+    self._make_train_function()
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\engine\training.py", line 992, in _make_train_function
+    loss=self.total_loss)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\legacy\interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\optimizers.py", line 173, in get_updates
+    grads = self.get_gradients(loss, params)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\optimizers.py", line 78, in get_gradients
+    grads = K.gradients(loss, params)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\backend\tensorflow_backend.py", line 2519, in gradients
+    return tf.gradients(loss, variables, colocate_gradients_with_ops=True)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gradients_impl.py", line 532, in gradients
+    gate_gradients, aggregation_method, stop_gradients)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gradients_impl.py", line 701, in _GradientsHelper
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gradients_impl.py", line 396, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gradients_impl.py", line 701, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\nn_grad.py", line 520, in _Conv2DGrad
+    data_format=data_format),
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 1227, in conv2d_backprop_input
+    dilations=dilations, name=name)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\ops.py", line 3414, in create_op
+    op_def=op_def)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\ops.py", line 1740, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+...which was originally created as op 'mrcnn_mask/convolution', defined at:
+  File "C:\Users\Administrator\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+[elided 25 identical lines from previous traceback]
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\IPython\core\interactiveshell.py", line 3265, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-2-be1c86ea2182>", line 11, in <module>
+    model_dir=os.path.join(DEFAULT_LOGS_DIR, 'mask_rcnn'))
+  File "H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\maskrcnn\mrcnn\model.py", line 1899, in __init__
+    self.keras_model = self.build(mode=mode, config=config)
+  File "H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\maskrcnn\mrcnn\model.py", line 2061, in build
+    train_bn=config.TRAIN_BN)
+  File "H:\ObjectDetection\AiRobot_WAD_Video_Segmentation\maskrcnn\mrcnn\model.py", line 999, in build_fpn_mask_graph
+    name="mrcnn_mask")(x)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\layers\wrappers.py", line 213, in call
+    y = self.layer.call(inputs, **kwargs)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\layers\convolutional.py", line 168, in call
+    dilation_rate=self.dilation_rate)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\keras\backend\tensorflow_backend.py", line 3341, in conv2d
+    data_format=tf_data_format)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 780, in convolution
+    return op(input, filter)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 868, in __call__
+    return self.conv_op(inp, filter)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 520, in __call__
+    return self.call(inp, filter)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\nn_ops.py", line 204, in __call__
+    name=self.name)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\ops\gen_nn_ops.py", line 955, in conv2d
+    data_format=data_format, dilations=dilations, name=name)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\ops.py", line 3414, in create_op
+    op_def=op_def)
+  File "C:\Users\Administrator\Anaconda3\lib\site-packages\tensorflow\python\framework\ops.py", line 1740, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+ResourceExhaustedError (see above for traceback): OOM when allocating tensor with shape[600,256,28,28] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[Node: training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput = Conv2DBackpropInput[T=DT_FLOAT, _class=["loc:@training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropFilter"], data_format="NCHW", dilations=[1, 1, 1, 1], padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/device:GPU:0"](training_3/SGD/gradients/mrcnn_mask/convolution_grad/Conv2DBackpropInput-0-VecPermuteNHWCToNCHW-LayoutOptimizer, mrcnn_mask/kernel/read, training_3/SGD/gradients/mrcnn_mask/Sigmoid_grad/SigmoidGrad)]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+	 [[Node: training_3/SGD/gradients/mrcnn_mask_conv1/convolution_grad/Conv2DBackpropInput-0-0-TransposeNCHWToNHWC-LayoutOptimizer/_9749 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/device:CPU:0", send_device="/job:localhost/replica:0/task:0/device:GPU:0", send_device_incarnation=1, tensor_name="edge_12481...tOptimizer", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"]()]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
